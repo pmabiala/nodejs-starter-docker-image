@@ -1,0 +1,28 @@
+# This YAML exposes the fields defined in the UI. It can be edited directly or have new YAML pasted in.
+# Not all available Kubernetes properties are recognized by the form exposed in the UI, and unrecognized properties are ignored during import.
+# If the required properties are not supported by this step, the 'Deploy raw Kubernetes YAML' step can be used to deploy YAML directly to Kubernetes, and supports all properties.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  labels:
+    app: nodejs
+spec:
+  selector:
+    matchLabels:
+      octopusexport: OctopusExport
+  replicas: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: nodejs
+        octopusexport: OctopusExport
+    spec:
+      containers:
+        - name: nodongo
+          image: grismauve/nodejs-starter
+          ports:
+            - containerPort: 3000
+
