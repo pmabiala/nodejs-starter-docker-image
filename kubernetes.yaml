@@ -27,4 +27,12 @@ spec:
           image: grismauve/nodejs-starter
           ports:
             - containerPort: 3000
+           
+ spec:
+  type: ClusterIP  
+  ports:
+  - name: "hello-world"
+    port: 3000
+  selector:
+    app: hello-world
 
