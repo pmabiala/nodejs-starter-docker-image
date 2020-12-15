@@ -22,13 +22,12 @@ spec:
         app: nodejs
         octopusexport: OctopusExport
     spec:
+      type: ClusterIP
       containers:
         - name: nodongo
           image: grismauve/nodejs-starter
           ports:
             - containerPort: 3000
            
- spec:
-  type: ClusterIP  
   
 
