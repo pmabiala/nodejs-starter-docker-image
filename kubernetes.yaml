@@ -26,8 +26,8 @@ spec:
       containers:
         - name: nodongo
           image: grismauve/nodejs-starter
-          ports:
-            - containerPort: 3000
+          #ports:
+          #  - containerPort: 3000
            
 ---
 
