@@ -7,8 +7,8 @@ metadata:
   name: nodejs-deployment
   labels:
     app: nodejs
-  annotations:
-    dev.okteto.com/auto-ingress: "true"
+  #annotations:
+    #dev.okteto.com/auto-ingress: "true"
 spec:
   selector:
     matchLabels:
