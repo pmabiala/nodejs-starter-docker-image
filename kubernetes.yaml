@@ -19,7 +19,7 @@ spec:
   template:
     metadata:
       labels:
-        app: nodejs
+        app: nondongo
         octopusexport: OctopusExport
     spec:
       #type: ClusterIP
