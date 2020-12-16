@@ -6,7 +6,7 @@ kind: Deployment
 metadata:
   name: nodejs-deployment
   labels:
-    app: nodejs
+    app: nodongo
   #annotations:
     #dev.okteto.com/auto-ingress: "true"
 spec:
