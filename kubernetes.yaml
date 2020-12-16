@@ -34,15 +34,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-starter-app
+  name: nodongo
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "nodejs-starter-app"
+  - name: "nodongo"
     port: 3000
   selector:
-    app: nodejs-starter-app
+    app: nodongo
   
 
