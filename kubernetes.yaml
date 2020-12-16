@@ -22,7 +22,7 @@ spec:
         app: nodejs
         octopusexport: OctopusExport
     spec:
-      type: ClusterIP
+      #type: ClusterIP
       containers:
         - name: nodongo
           image: grismauve/nodejs-starter
