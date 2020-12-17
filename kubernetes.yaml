@@ -4,15 +4,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-deployment
-  labels:
-    app: nodongo
+  name: nodongo
+  #labels:
+  #  app: nodongo
   #annotations:
     #dev.okteto.com/auto-ingress: "true"
 spec:
   selector:
     matchLabels:
-      octopusexport: OctopusExport
+      app: nodongo
+      #octopusexport: OctopusExport
   replicas: 2
   strategy:
     type: Recreate
@@ -20,7 +21,7 @@ spec:
     metadata:
       labels:
         app: nondongo
-        octopusexport: OctopusExport
+        #octopusexport: OctopusExport
     spec:
       #type: ClusterIP
       containers:
