@@ -20,7 +20,7 @@ spec:
   template:
     metadata:
       labels:
-        app: nondongo
+        app: nodongo
         #octopusexport: OctopusExport
     spec:
       #type: ClusterIP
